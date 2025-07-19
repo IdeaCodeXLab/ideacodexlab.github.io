@@ -1,0 +1,22 @@
+---
+layout: page
+title: Our Projects
+permalink: /projects/
+---
+
+# Our GitHub Projects
+
+Here are some of our public repositories on GitHub:
+
+{% if site.github.public_repositories %}
+  <ul>
+  {% for repository in site.github.public_repositories %}
+    <li>
+      <h3><a href="{{ repository.html_url }}">{{ repository.name }}</a></h3>
+      <p>{{ repository.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No public repositories found or GitHub metadata not configured correctly.</p>
+{% endif %}
