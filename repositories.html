@@ -4,316 +4,112 @@ title: Our Projects
 permalink: /projects/
 ---
 
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<div class="page-content">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Our Projects</h1>
-      <p class="hero-subtitle">Explore our portfolio of innovative solutions, open-source contributions, and cutting-edge applications that showcase our expertise and passion for technology.</p>
+<div class="gradient-bg">
+  <div class="hero fade-in">
+    <div class="hero-icon">
+      🚀
     </div>
-  </section>
-
-  <!-- Featured Projects Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">Highlighting some of our most impactful and innovative work across various technologies and industries.</p>
-      </div>
-      
-      <div class="grid grid-2">
-        <div class="project-card">
-          <div class="project-image">🎨</div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <a href="https://ideacodexlab.github.io" target="_blank">IdeaCodexLab Website</a>
-            </h3>
-            <p class="project-description">Modern, responsive company website built with Jekyll, featuring custom CSS animations, dark mode support, and interactive elements. Showcases our design and development capabilities.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Jekyll</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">GitHub Pages</span>
-              <span class="tech-tag">Responsive Design</span>
-            </div>
-            <div class="project-links">
-              <a href="https://ideacodexlab.github.io" target="_blank">Live Demo</a>
-              <a href="https://github.com/IdeaCodeXLab/ideacodexlab.github.io" target="_blank">Source Code</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-image">⚡</div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <a href="#" target="_blank">E-Commerce Platform</a>
-            </h3>
-            <p class="project-description">Full-stack e-commerce solution with real-time inventory management, secure payment processing, admin dashboard, and customer analytics. Built for scalability and performance.</p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Stripe API</span>
-              <span class="tech-tag">Redux</span>
-              <span class="tech-tag">Express.js</span>
-            </div>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">Case Study</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-image">📊</div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <a href="#" target="_blank">Data Analytics Dashboard</a>
-            </h3>
-            <p class="project-description">Interactive dashboard for visualizing complex data sets with real-time updates, customizable charts, and advanced filtering. Perfect for business intelligence and reporting.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">D3.js</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Chart.js</span>
-              <span class="tech-tag">WebSocket</span>
-            </div>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">Documentation</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-image">🤖</div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <a href="#" target="_blank">AI-Powered Chatbot</a>
-            </h3>
-            <p class="project-description">Intelligent chatbot with natural language processing capabilities for customer support automation. Features sentiment analysis, multi-language support, and learning algorithms.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Machine Learning</span>
-            </div>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">Research Paper</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GitHub Repositories Section -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <h2>GitHub Repositories</h2>
-        <p class="section-subtitle">Our open-source contributions and public projects available on GitHub. We believe in sharing knowledge and contributing to the developer community.</p>
-      </div>
-      
-      <div id="github-repos" class="grid grid-3">
-        {% if site.github.public_repositories %}
-          {% for repository in site.github.public_repositories %}
-            <div class="project-card">
-              <div class="project-image">
-                {% if repository.language == 'JavaScript' %}📜
-                {% elsif repository.language == 'Python' %}🐍
-                {% elsif repository.language == 'Java' %}☕
-                {% elsif repository.language == 'HTML' %}🌐
-                {% elsif repository.language == 'CSS' %}🎨
-                {% elsif repository.language == 'TypeScript' %}📘
-                {% elsif repository.language == 'Ruby' %}💎
-                {% elsif repository.language == 'PHP' %}🐘
-                {% elsif repository.language == 'Go' %}🐹
-                {% elsif repository.language == 'Rust' %}🦀
-                {% elsif repository.language == 'Swift' %}🍎
-                {% elsif repository.language == 'Kotlin' %}🤖
-                {% else %}📁
-                {% endif %}
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="{{ repository.html_url }}" target="_blank">{{ repository.name }}</a>
-                </h3>
-                <p class="project-description">
-                  {% if repository.description %}
-                    {{ repository.description }}
-                  {% else %}
-                    A {{ repository.language | default: "code" }} project by IdeaCodexLab.
-                  {% endif %}
-                </p>
-                
-                <div class="project-tech">
-                  {% if repository.language %}
-                    <span class="tech-tag">{{ repository.language }}</span>
-                  {% endif %}
-                  {% if repository.topics %}
-                    {% for topic in repository.topics limit:3 %}
-                      <span class="tech-tag">{{ topic }}</span>
-                    {% endfor %}
-                  {% endif %}
-                </div>
-                
-                <div class="project-links">
-                  <a href="{{ repository.html_url }}" target="_blank">View Code</a>
-                  {% if repository.homepage %}
-                    <a href="{{ repository.homepage }}" target="_blank">Live Demo</a>
-                  {% endif %}
-                </div>
-                
-                <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.875rem; color: var(--text-light);">
-                  {% if repository.stargazers_count %}
-                    <span>⭐ {{ repository.stargazers_count }}</span>
-                  {% endif %}
-                  {% if repository.forks_count %}
-                    <span>🍴 {{ repository.forks_count }}</span>
-                  {% endif %}
-                  {% if repository.updated_at %}
-                    <span>📅 {{ repository.updated_at | date: "%b %Y" }}</span>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="card" style="grid-column: 1 / -1; text-align: center;">
-            <div class="card-icon">🔄</div>
-            <h3>Loading Repositories...</h3>
-            <p>Our GitHub repositories are being loaded. If this message persists, please check our <a href="https://github.com/shibbirmcc" target="_blank">GitHub profile</a> directly.</p>
-          </div>
-        {% endif %}
-      </div>
-      
-      <div class="text-center mt-4">
-        <a href="https://github.com/shibbirmcc" target="_blank" class="btn btn-primary">View All on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Categories Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Project Categories</h2>
-        <p class="section-subtitle">Our diverse portfolio spans multiple domains and technologies, showcasing our versatility and expertise.</p>
-      </div>
-      
-      <div class="grid grid-3">
-        <div class="card text-center">
-          <div class="card-icon">🌐</div>
-          <h3>Web Applications</h3>
-          <p>Full-stack web applications with modern frameworks, responsive design, and optimized performance.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>E-commerce platforms</li>
-            <li>Content management systems</li>
-            <li>Social media applications</li>
-            <li>Business dashboards</li>
-          </ul>
-        </div>
-        
-        <div class="card text-center">
-          <div class="card-icon">📱</div>
-          <h3>Mobile Apps</h3>
-          <p>Cross-platform and native mobile applications for iOS and Android with intuitive user experiences.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>React Native apps</li>
-            <li>Flutter applications</li>
-            <li>Progressive Web Apps</li>
-            <li>Native iOS/Android</li>
-          </ul>
-        </div>
-        
-        <div class="card text-center">
-          <div class="card-icon">🔧</div>
-          <h3>Developer Tools</h3>
-          <p>Open-source tools and libraries that help developers build better software more efficiently.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>CLI utilities</li>
-            <li>Code generators</li>
-            <li>Testing frameworks</li>
-            <li>Development plugins</li>
-          </ul>
-        </div>
-        
-        <div class="card text-center">
-          <div class="card-icon">🤖</div>
-          <h3>AI & Machine Learning</h3>
-          <p>Intelligent applications leveraging artificial intelligence and machine learning technologies.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>Chatbots and virtual assistants</li>
-            <li>Recommendation systems</li>
-            <li>Image recognition</li>
-            <li>Natural language processing</li>
-          </ul>
-        </div>
-        
-        <div class="card text-center">
-          <div class="card-icon">📊</div>
-          <h3>Data Visualization</h3>
-          <p>Interactive dashboards and visualization tools for complex data analysis and business intelligence.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>Analytics dashboards</li>
-            <li>Real-time monitoring</li>
-            <li>Interactive charts</li>
-            <li>Reporting systems</li>
-          </ul>
-        </div>
-        
-        <div class="card text-center">
-          <div class="card-icon">☁️</div>
-          <h3>Cloud Solutions</h3>
-          <p>Scalable cloud-native applications and infrastructure solutions for modern businesses.</p>
-          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem;">
-            <li>Microservices architecture</li>
-            <li>Serverless applications</li>
-            <li>Container orchestration</li>
-            <li>DevOps automation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action Section -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <h2>Have a Project in Mind?</h2>
-        <p class="section-subtitle">Let's collaborate to bring your ideas to life with cutting-edge technology and innovative solutions.</p>
-      </div>
-      
-      <div class="text-center">
-        <div style="margin-bottom: 2rem;">
-          <p style="font-size: 1.125rem; color: var(--text-secondary);">
-            Whether you need a complete application from scratch or want to enhance an existing project, 
-            we're here to help you achieve your goals with professional development services.
-          </p>
-        </div>
-        
-        <div class="hero-cta">
-          <a href="/#contact" class="btn btn-primary">Start Your Project</a>
-          <a href="/about/" class="btn btn-secondary">Learn More About Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <h1>Our Projects</h1>
+    <p class="subtitle">Explore our portfolio of innovative solutions, open-source contributions, and cutting-edge applications that showcase our expertise and passion for technology.</p>
+  </div>
 </div>
 
-<!-- Theme Toggle Button -->
-<button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+<section class="content-section white">
+  <h2>Featured Projects</h2>
+  <div class="divider"></div>
+  <p>Highlighting some of our most impactful and innovative work across various technologies and industries.</p>
+  
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-icon">
+        🎨
+      </div>
+      <h3>IdeaCodexLab Website</h3>
+      <p>Modern, responsive company website built with Jekyll, featuring custom design and seamless user experience.</p>
+    </div>
+    
+    <div class="service-item">
+      <div class="service-icon">
+        🤖
+      </div>
+      <h3>AI Development Tools</h3>
+      <p>Custom AI assistants and productivity tools leveraging LLMs for automation and enhanced developer workflows.</p>
+    </div>
+    
+    <div class="service-item">
+      <div class="service-icon">
+        ⚡
+      </div>
+      <h3>Microservice Architecture</h3>
+      <p>Scalable backend systems built with modern technologies including Docker, Kafka, and cloud-native solutions.</p>
+    </div>
+  </div>
+</section>
 
-<script src="/assets/js/main.js"></script>
+<section class="tech-section">
+  <div class="tech-icons">
+    <div class="tech-icon">
+      <div class="tech-icon-inner">☕</div>
+    </div>
+    <div class="tech-icon">
+      <div class="tech-icon-inner">🐹</div>
+    </div>
+    <div class="tech-icon">
+      <div class="tech-icon-inner">🐍</div>
+    </div>
+    <div class="tech-icon">
+      <div class="tech-icon-inner">🐳</div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section dark">
+  <h2>Open Source Contributions</h2>
+  <div class="divider"></div>
+  <p>We believe in giving back to the developer community through open-source projects and contributions. Our repositories showcase our commitment to collaborative development and knowledge sharing.</p>
+  <p>From developer utilities to AI-powered tools, our open-source work demonstrates our expertise in modern software development practices and emerging technologies.</p>
+</section>
+
+<section class="content-section white">
+  <h2>Technologies We Use</h2>
+  <div class="divider"></div>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-icon">
+        🏗️
+      </div>
+      <h3>Backend Development</h3>
+      <p>Java, Go, Python, Node.js, microservices architecture, RESTful APIs, and database design.</p>
+    </div>
+    
+    <div class="service-item">
+      <div class="service-icon">
+        ☁️
+      </div>
+      <h3>Cloud & DevOps</h3>
+      <p>Docker, Kubernetes, CI/CD pipelines, cloud platforms, and infrastructure as code.</p>
+    </div>
+    
+    <div class="service-item">
+      <div class="service-icon">
+        🧠
+      </div>
+      <h3>AI & Machine Learning</h3>
+      <p>LLM integration, RAG systems, AI assistants, and intelligent automation tools.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <h2>Interested in Our Work?</h2>
+  <div class="divider"></div>
+  <p>Want to collaborate on a project or learn more about our development process? We'd love to connect.</p>
+  <div class="contact-buttons">
+    <a href="mailto:info@ideacodexlab.com" class="btn btn-primary">EMAIL US</a>
+    <a href="https://github.com/ideacodexlab" class="btn" target="_blank">GITHUB</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© IdeaCodeXLab 2025 | Website by <a href="https://html5up.net" target="_blank">HTML5 UP</a></p>
+</footer>
